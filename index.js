@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express=require('express')
 const app=express()
-const PORT=4000
+const PORT=process.env.PORT ||4000
 const mongoose=require('mongoose')
 const userRoutes=require("./userRoutes")
 
@@ -22,7 +22,7 @@ const connect=async()=>{
 
 
 
-app.listen(PORT,()=>{
+app.listen(PORT, '0.0.0.0' ,()=>{
     console.log(`server is running in ${PORT}`)
     connect()
 })
