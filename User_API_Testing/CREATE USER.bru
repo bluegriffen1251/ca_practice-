@@ -1,0 +1,19 @@
+meta {
+  name: CREATE USER
+  type: http
+  seq: 3
+}
+
+post {
+  url: http:/localhost:4000/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name":"Sahith",
+    "email":"sahith12@gmail.com",
+    "password":"123456789"
+  }
+}
